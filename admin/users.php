@@ -10,7 +10,7 @@ $page = "users";
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
-	 	<a href="/">Закупка</a>
+	 	<a href="/admin">Головна</a>
 	 </li>
     <li class="breadcrumb-item active">Працівники</li>
   </ol>
@@ -27,7 +27,7 @@ $page = "users";
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
-                        <th>ID</th>
+                        <th>#</th>
                         <th>ПІБ</th>
                         <th>Електронна пошта</th>
                         <th>Права адм.</th>

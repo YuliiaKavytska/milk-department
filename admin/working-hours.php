@@ -1,10 +1,10 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
-$page = "stores";
+include  $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
+$page = "shift";
 ?>
 
 <?php
-    include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+    include "parts/head.php";
 ?>
 
 <nav aria-label="breadcrumb">
@@ -12,7 +12,7 @@ $page = "stores";
     <li class="breadcrumb-item">
 	 	<a href="/admin">Головна</a>
 	 </li>
-    <li class="breadcrumb-item active" aria-current="page">Магазини</li>
+    <li class="breadcrumb-item active">Години роботи працівників</li>
   </ol>
 </nav>
 
@@ -21,20 +21,24 @@ $page = "stores";
         <div class="card strpied-tabled-with-hover">
             <div class="card-header ">
                 <h4 class="card-title ">
-                Products
-                <a href="options/stores/add.php" class="btn btn-success">Add</a></h4>
+					 Зміни
+					 <a href="/admin/options/working/add.php" class="btn btn-success">Add</a></h4>
+                </h4>
             </div>
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>#</th>
-                        <th>Назва</th>
-                        <th>Адреса</th>
-                        <th>Дії</th>
+                        <th>ПІБ</th>
+                        <th>Цех</th>
+                        <th>Позиція</th>
+                        <th>Зміна</th>
+                        <th>Дата</th>
+                        <th class="ml-2">Дії</th>
                     </thead>
                     <tbody id="table-body">
                         <?php
-                            include "tables/table-stores.php";
+                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/tables/table-working.php";
                         ?>
                     </tbody>
                 </table>
@@ -43,8 +47,7 @@ $page = "stores";
     </div>
 </div>
 
-<!--  My script    -->
-<script src="../assets/js/script.js"></script>
 <?php
-    include "parts/footer.php";
+    include "parts/footer.php"
 ?>
+

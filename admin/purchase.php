@@ -1,18 +1,19 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
-$page = "catigories";
+include  $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
+$page = "purchase";
 ?>
 
 <?php
-    include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+    include "parts/head.php";
 ?>
+
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
-	 	<a href="/admin">Home</a>
+	 	<a href="/admin">Головна</a>
 	 </li>
-    <li class="breadcrumb-item active" aria-current="page">Category</li>
+    <li class="breadcrumb-item active" aria-current="page">Закупка</li>
   </ol>
 </nav>
 
@@ -21,19 +22,23 @@ $page = "catigories";
         <div class="card strpied-tabled-with-hover">
             <div class="card-header ">
                 <h4 class="card-title ">
-                Category
+                Закупка
                 <a href="options/purchase/add.php" class="btn btn-success">Add</a></h4>
             </div>
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>ID</th>
-                        <th>Name of category</th>
-                        <th>Action</th>
+                        <th>Назва</th>
+                        <th>Місто</th>
+                        <th>Кількість</th>
+                        <th>Ціна</th>
+                        <th>Дата закупки</th>
+                        <th>Дії</th>
                     </thead>
                     <tbody id="table-body">
                         <?php
-                            include "table-category.php";
+                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/tables/table-purchase.php";
                         ?>
                     </tbody>
                 </table>
@@ -42,8 +47,6 @@ $page = "catigories";
     </div>
 </div>
 
-<!--  My script    -->
-<script src="../assets/js/script.js"></script>
 <?php
-    include "parts/footer.php";
+    include "parts/footer.php"
 ?>

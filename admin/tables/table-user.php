@@ -1,10 +1,11 @@
 <?php
 	$sqlPurchase = "SELECT * FROM employees";
 	$PurchaseResult = $connect->query($sqlPurchase);
+	$i = 1;
 	while($row = mysqli_fetch_assoc($PurchaseResult)){
 	?>
 	<tr>
-		<td><?php echo $row["id"] ?></td>
+		<td><?php echo $i ?></td>
 		<td><?php echo $row["name"] ?></td>
 		<td><?php echo $row["mail"] ?></td>
 		<td><?php if($row["admin"] == 1){ echo "Так";}else{ echo "Ні";}  ?>.</td>
@@ -18,5 +19,6 @@
 		</td>
 		</tr>
 	<?php
+	$i++;
 	}
 ?>

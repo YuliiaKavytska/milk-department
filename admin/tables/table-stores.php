@@ -1,10 +1,11 @@
 <?php
 	$sqlPurchase = "SELECT * FROM shops";
 	$PurchaseResult = $connect->query($sqlPurchase);
+	$i = 1;
 	while($row = mysqli_fetch_assoc($PurchaseResult)){
 	?>
 	<tr>
-		<td><?php echo $row["id"] ?></td>
+		<td><?php echo $i ?></td>
 		<td><?php echo $row["name"] ?></td>
 		<td><?php echo $row["address"] ?></td>
 		<td class="float-right">
@@ -15,5 +16,6 @@
 		</td>
 		</tr>
 	<?php
+	$i++;
 	}
 ?>
