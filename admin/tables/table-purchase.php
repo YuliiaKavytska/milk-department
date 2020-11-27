@@ -7,7 +7,7 @@
 	<tr>
 		<td><?php echo $i ?></td>
 		<td class="w-25"><?php echo $row["product"] ?></td>
-		<td class="w-25">м. <?php echo $row["city"] ?></td>
+		<td class="w-25"><?php echo $row["city"] ?></td>
 		<td><?php echo $row["quantity"] ?> л.</td>
 		<td><?php echo $row["price"] ?> грн/л</td>
 		<td><?php echo $row["date"] ?></td>

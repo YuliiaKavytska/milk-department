@@ -42,7 +42,7 @@
 		</a>
 	</li>
 	<li>
-		<a class="nav-link" href="#">
+		<a class="nav-link" href="/admin/options/exit.php">
 			<i class="nc-icon nc-key-25"></i>
 			<p>Вийти</p>
 		</a>

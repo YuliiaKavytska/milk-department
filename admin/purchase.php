@@ -30,7 +30,7 @@ $page = "purchase";
                     <thead>
                         <th>ID</th>
                         <th>Назва</th>
-                        <th>Місто</th>
+                        <th>Місто / Село</th>
                         <th>Кількість</th>
                         <th>Ціна</th>
                         <th>Дата закупки</th>

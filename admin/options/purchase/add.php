@@ -12,7 +12,7 @@ if(isset($_POST["add-purchase"])){
     $_POST["price"]  . "', '" . 
     $_POST["date"]  . "')";
     if(mysqli_query($connect, $addSql)){
-        header("Location: /admin");
+        header("Location: /admin/purchase.php");
     }
 }
 ?>
@@ -66,7 +66,7 @@ if(isset($_POST["add-purchase"])){
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Дата (рік-місяць-день):</label>
-                                <input type="text" class="form-control mr-2" name="date" placeholder=2020-10-04>
+                                <input type="date" class="form-control mr-2" name="date" placeholder=2020-10-04>
                             </div>
                         </div>
                     </div>

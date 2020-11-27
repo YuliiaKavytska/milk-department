@@ -20,6 +20,7 @@
 		<td><?php echo $product["date"] ?></td>
 		<td>
 		<div class="btn-group mr-2" role="group" aria-label="First group">
+			<a href="options/sale/edit.php?id=<?php echo $row["id"] ?>" class="btn btn-primary">Edit</a>
 			<div data-link="http://milk.local/admin/options/sale/delete.php?id=<?php echo $row["id"] ?>" onclick="deleteProduct(this)" id="delete-categ-btn" class="btn btn-danger">Delete</div>
 		</div>
 		</td>

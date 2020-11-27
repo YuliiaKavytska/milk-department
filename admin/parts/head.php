@@ -17,6 +17,11 @@
     <link href="/admin/assets/css/demo.css" rel="stylesheet" />
     <link href="/admin/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
+<?php 
+if(!isset($_COOKIE["admin"])){
+	header("Location: /");
+}
+?>
 
 <body>
     <div class="wrapper">
@@ -36,7 +41,10 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Привіт, ! Ти володієш правами адміністратора. </a>
+									<?php
+										$user = mysqli_fetch_assoc($connect->query("SELECT * FROM employees WHERE id=" . $_COOKIE["admin"]))
+									?>
+                    <a class="navbar-brand" href="#pablo"> Привіт, <?php echo $user["name"] ?>! Ти володієш правами адміністратора. </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>

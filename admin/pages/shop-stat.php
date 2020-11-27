@@ -1,10 +1,11 @@
 <?php 
 include  $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
-$page = "users";
+$page = "rating";
 ?>
 
 <?php
-    include "parts/head.php";
+		include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+		// SELECT * FROM `purchase` WHERE `date` BETWEEN '2020-11-19' AND '2020-11-26'
 ?>
 
 <nav aria-label="breadcrumb">
@@ -12,7 +13,7 @@ $page = "users";
     <li class="breadcrumb-item">
 	 	<a href="/admin">Головна</a>
 	 </li>
-    <li class="breadcrumb-item active">Працівники</li>
+    <li class="breadcrumb-item active">Статистика закупок</li>
   </ol>
 </nav>
 
@@ -49,6 +50,6 @@ $page = "users";
 </div>
 
 <?php
-    include "parts/footer.php"
+    include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/footer.php";
 ?>
 

@@ -8,6 +8,8 @@
 		<td><?php echo $i ?></td>
 		<td><?php echo $row["name"] ?></td>
 		<td><?php echo $row["mail"] ?></td>
+		<td><?php echo $row["confirm_mail"] ?></td>
+		<td><?php if($row["verifided"] == 1){ echo "Так";}else{ echo "Ні";} ?></td>
 		<td><?php if($row["admin"] == 1){ echo "Так";}else{ echo "Ні";}  ?>.</td>
 		<td><?php echo $row["position"] ?></td>
 		<td><?php echo $row["branc"] ?></td>

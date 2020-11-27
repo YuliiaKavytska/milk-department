@@ -2,7 +2,6 @@
 include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 $page = "users";
 
-include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 
 if(isset($_GET)){
     $find = "SELECT * FROM employees WHERE id = " . $_GET["id"];
@@ -16,11 +15,13 @@ if(isset($_POST["edit-user"])){
     "', admin = '" . $_POST["admin"] . 
     "', position = '" . $_POST["position"] . 
     "', branc = '" . $_POST["branc"] . 
-    "' WHERE employees.id = " . $_POST["id"];
+		"', verifided = '" . $_POST["verifided"] . 
+		"' WHERE employees.id = " . $_POST["id"];
     if(mysqli_query($connect, $update)){
         header("Location: /admin/users.php");
     }
 }
+include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 ?>
 
 <nav aria-label="breadcrumb">
@@ -59,13 +60,28 @@ if(isset($_POST["edit-user"])){
                                 <input type="text" class="form-control" name="mail" value="<?php echo $user["mail"]?>" placeholder="mmm@mmm.mm">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label>Права адміністратора</label>
                                 <select name="admin" class="form-control" id="exampleFormControlSelect1">
                                     <option value="<?php echo $user["admin"]; ?>"><?php if($user["admin"] == 1){ echo "Так";}else{ echo "Ні";} ?></option>
                                     <?php    
                                         if($user["admin"] == 1){ 
+                                            echo "<option value='0'>Ні</option>";
+                                        }else{ 
+                                            echo "<option value='1'>Так</option>";
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Пошта підтведжена</label>
+                                <select name="verifided" class="form-control" id="exampleFormControlSelect1">
+                                    <option value="<?php echo $user["verifided"]; ?>"><?php if($user["verifided"] == 1){ echo "Так";}else{ echo "Ні";} ?></option>
+                                    <?php    
+                                        if($user["verifided"] == 1){ 
                                             echo "<option value='0'>Ні</option>";
                                         }else{ 
                                             echo "<option value='1'>Так</option>";
