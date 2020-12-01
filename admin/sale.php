@@ -22,7 +22,7 @@ $page = "sale";
             <div class="card-header ">
                 <h4 class="card-title ">
                 Продаж продукції
-                <a href="options/sale/add.php" class="btn btn-success">Add</a></h4>
+                <a href="options/sale/add.php" class="btn btn-success">Додати</a></h4>
             </div>
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
@@ -33,7 +33,7 @@ $page = "sale";
                         <th>Кількість</th>
                         <th>Ціна</th>
                         <th>Дата</th>
-                        <th>Видалення</th>
+                        <th>Дії</th>
                     </thead>
                     <tbody id="table-body">
                         <?php

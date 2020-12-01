@@ -22,7 +22,7 @@ $page = "shift";
             <div class="card-header ">
                 <h4 class="card-title ">
 					 Зміни
-					 <a href="/admin/options/working/add.php" class="btn btn-success">Add</a></h4>
+					 <a href="/admin/options/working/add.php" class="btn btn-success">Додати</a></h4>
                 </h4>
             </div>
             <div class="card-body table-full-width table-responsive">

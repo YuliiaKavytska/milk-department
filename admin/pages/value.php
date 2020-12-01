@@ -4,7 +4,8 @@ $page = "rating";
 ?>
 
 <?php
-    include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+		include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+		// SELECT * FROM `purchase` WHERE `date` BETWEEN '2020-11-19' AND '2020-11-26'
 ?>
 
 <nav aria-label="breadcrumb">
@@ -12,34 +13,56 @@ $page = "rating";
     <li class="breadcrumb-item">
 	 	<a href="/admin">Головна</a>
 	 </li>
-    <li class="breadcrumb-item active">Прибуток</li>
+    <li class="breadcrumb-item active">Статистика закупок</li>
   </ol>
 </nav>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="card strpied-tabled-with-hover">
-            <div class="card-header ">
-                <h4 class="card-title ">
-                Працівники
-                </h4>
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" id="value" action="/admin/pages/options/valueStat.php">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>З:</label>
+                                <input type="date" class="form-control" name="date-1" id="minimum">
+                            </div>
+                        </div>
+												<div class="col-md-6">
+												<div class="form-group">
+                                <label>По:</label>
+                                <input type="date" class="form-control" name="date-2" id="maximum">
+                            </div>
+												</div>
+                    </div>
+                    <button type="submit" name="add-sale" class="btn btn-info btn-fill pull-right">Пошук</button>
+                    <div class="clearfix"></div>
+                </form>
             </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card strpied-tabled-with-hover">
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
-                        <th>#</th>
-                        <th>ПІБ</th>
-                        <th>Електронна пошта</th>
-                        <th>Код</th>
-                        <th>Підтверджено</th>
-                        <th>Права адм.</th>
-                        <th>Позиція</th>
-                        <th>Відділ</th>
-                        <th>Дії</th>
+                        <th>ID</th>
+                        <th>Товар</th>
+                        <th>Кількість</th>
+                        <th>Ціна зак.</th>
+                        <th>Магазин</th>
+                        <th>Кількість</th>
+                        <th>Ціна прод</th>
+                        <th>Дата закупки</th>
                     </thead>
-                    <tbody id="table-body">
+                    <tbody id="table-value">
                         <?php
-                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/tables/table-user.php";
+                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/pages/tables/valueTable.php";
                         ?>
                     </tbody>
                 </table>

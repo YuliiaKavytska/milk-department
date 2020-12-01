@@ -18,6 +18,28 @@ $page = "rating";
 
 <div class="row">
     <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" id="user-search" action="http://milk.local/admin/pages/options/findUser.php">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Партія</label>
+                                <input type="date" class="form-control" name="date-user" id="date-user">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" name="add-sale" class="btn btn-info btn-fill pull-right" >Пошук</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="row">
+    <div class="col-md-12">
         <div class="card strpied-tabled-with-hover">
             <div class="card-header ">
                 <h4 class="card-title ">
@@ -35,11 +57,10 @@ $page = "rating";
                         <th>Права адм.</th>
                         <th>Позиція</th>
                         <th>Відділ</th>
-                        <th>Дії</th>
                     </thead>
-                    <tbody id="table-body">
+                    <tbody id="table-body-user">
                         <?php
-                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/tables/table-user.php";
+                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/pages/tables/employee.php";
                         ?>
                     </tbody>
                 </table>

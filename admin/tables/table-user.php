@@ -15,8 +15,8 @@
 		<td><?php echo $row["branc"] ?></td>
 		<td class="float-right">
 		<div class="btn-group mr-2" role="group" aria-label="First group">
-			<a href="/admin/options/users/edit.php?id=<?php echo $row["id"] ?>" class="btn btn-primary">Edit</a>
-			<div data-link="http://milk.local/admin/options/users/delete.php?id=<?php echo $row["id"] ?>" onclick="deleteProduct(this)" id="delete-categ-btn" class="btn btn-danger">Delete</div>
+			<a href="/admin/options/users/edit.php?id=<?php echo $row["id"] ?>" class="btn btn-primary">Змінити</a>
+			<div data-link="http://milk.local/admin/options/users/delete.php?id=<?php echo $row["id"] ?>" onclick="deleteProduct(this)" id="delete-categ-btn" class="btn btn-danger">Видалити</div>
 		</div>
 		</td>
 		</tr>

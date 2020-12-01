@@ -67,7 +67,7 @@ if(isset($_POST["add"])){
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="add" class="btn btn-info btn-fill pull-right">Add</button>
+                    <button type="submit" name="add" class="btn btn-info btn-fill pull-right">Додати</button>
                     <div class="clearfix"></div>
                 </form>
             </div>

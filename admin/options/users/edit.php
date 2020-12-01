@@ -105,7 +105,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="edit-user" class="btn btn-info btn-fill pull-right">Edit</button>
+                    <button type="submit" name="edit-user" class="btn btn-info btn-fill pull-right">Змінити</button>
                     <div class="clearfix"></div>
                 </form>
             </div>

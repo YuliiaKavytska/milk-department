@@ -80,7 +80,7 @@ if(isset($_POST["edit"])){
                         </div>
 										</div>
 										<input type="hidden" name="id" value="<?php echo $user["id"]?>">
-                    <button type="submit" name="edit" class="btn btn-info btn-fill pull-right">Add</button>
+                    <button type="submit" name="edit" class="btn btn-info btn-fill pull-right">Додати</button>
                     <div class="clearfix"></div>
                 </form>
             </div>

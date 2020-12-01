@@ -16,8 +16,8 @@
 		<td><?php echo $row["date"] ?></td>
 		<td>
 		<div class="btn-group mr-2" role="group" aria-label="First group">
-			<a href="options/working/edit.php?id=<?php echo $row["id"] ?>" class="btn btn-primary">Edit</a>
-			<div data-link="http://milk.local/admin/options/working/delete.php?id=<?php echo $row["id"] ?>" onclick="deleteProduct(this)" id="delete-categ-btn" class="btn btn-danger">Delete</div>
+			<a href="options/working/edit.php?id=<?php echo $row["id"] ?>" class="btn btn-primary">Змінити</a>
+			<div data-link="http://milk.local/admin/options/working/delete.php?id=<?php echo $row["id"] ?>" onclick="deleteProduct(this)" id="delete-categ-btn" class="btn btn-danger">Видалити</div>
 		</div>
 		</td>
 		</tr>

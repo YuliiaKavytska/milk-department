@@ -5,8 +5,6 @@ $page = "rating";
 
 <?php
 		include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
-		// SELECT * FROM `purchase` WHERE `date` BETWEEN '2020-11-19' AND '2020-11-26'
-
 ?>
 
 <nav aria-label="breadcrumb">
@@ -20,28 +18,48 @@ $page = "rating";
 
 <div class="row">
     <div class="col-md-12">
-        <div class="card strpied-tabled-with-hover">
-            <div class="card-header ">
-                <h4 class="card-title ">
-                Працівники
-                </h4>
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" id="sale" action="/admin/pages/options/saleStat.php">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>З:</label>
+                                <input type="date" class="form-control" name="date-1" id="minimum">
+                            </div>
+                        </div>
+												<div class="col-md-6">
+												<div class="form-group">
+                                <label>По:</label>
+                                <input type="date" class="form-control" name="date-2" id="maximum">
+                            </div>
+												</div>
+                    </div>
+                    <button type="submit" name="add-sale" class="btn btn-info btn-fill pull-right">Пошук</button>
+                    <div class="clearfix"></div>
+                </form>
             </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card strpied-tabled-with-hover">
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>#</th>
-                        <th>ПІБ</th>
-                        <th>Електронна пошта</th>
-                        <th>Код</th>
-                        <th>Підтверджено</th>
-                        <th>Права адм.</th>
-                        <th>Позиція</th>
-                        <th>Відділ</th>
-                        <th>Дії</th>
+                        <th>Назва продукту</th>
+                        <th>Магазин</th>
+                        <th>Кількість</th>
+                        <th>Ціна</th>
+                        <th>Дата</th>
                     </thead>
-                    <tbody id="table-body">
+                    <tbody id="table-body-sale">
                         <?php
-                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/tables/table-user.php";
+                            include $_SERVER['DOCUMENT_ROOT'] . "/admin/pages/tables/sale.php";
                         ?>
                     </tbody>
                 </table>
@@ -49,6 +67,7 @@ $page = "rating";
         </div>
     </div>
 </div>
+
 
 <?php
     include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/footer.php";

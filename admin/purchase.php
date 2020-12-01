@@ -23,7 +23,7 @@ $page = "purchase";
             <div class="card-header ">
                 <h4 class="card-title ">
                 Закупка
-                <a href="options/purchase/add.php" class="btn btn-success">Add</a></h4>
+                <a href="options/purchase/add.php" class="btn btn-success">Додати</a></h4>
             </div>
             <div class="card-body table-full-width table-responsive">
                 <table class="table table-hover table-striped">

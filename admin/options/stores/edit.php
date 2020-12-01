@@ -56,7 +56,7 @@ if(isset($_POST["edit"])){
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="edit" class="btn btn-info btn-fill pull-right">Edit</button>
+                    <button type="submit" name="edit" class="btn btn-info btn-fill pull-right">Змінити</button>
                     <div class="clearfix"></div>
                 </form>
             </div>
