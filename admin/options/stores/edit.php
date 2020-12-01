@@ -2,7 +2,6 @@
 include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 $page = "products";
 
-include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 
 if(isset($_GET)){
     $findSql = "SELECT * FROM shops WHERE id = " . $_GET["id"];
@@ -17,6 +16,8 @@ if(isset($_POST["edit"])){
         header("Location: /admin/stores.php");
     }
 }
+
+include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 ?>
 
 <nav aria-label="breadcrumb">
@@ -65,6 +66,7 @@ if(isset($_POST["edit"])){
 </div>
 
 
+
 <?php
-    include "../../parts/footer.php";
+    include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/footer.php";
 ?>

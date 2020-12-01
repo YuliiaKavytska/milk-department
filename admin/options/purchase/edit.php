@@ -2,7 +2,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
     $page = "purchase";
 
-    include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+
 
     if(isset($_GET)){
         $findSql = "SELECT * FROM purchase WHERE id = " . $_GET["id"];
@@ -20,7 +20,8 @@
         if(mysqli_query($connect, $updateSql)){
             header("Location: /admin/purchase.php");
         }
-    }
+		}
+		include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 ?>
 
 <nav aria-label="breadcrumb">

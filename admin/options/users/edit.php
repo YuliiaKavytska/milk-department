@@ -3,11 +3,6 @@ include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 $page = "users";
 
 
-if(isset($_GET)){
-    $find = "SELECT * FROM employees WHERE id = " . $_GET["id"];
-    $findR = mysqli_query($connect, $find);
-    $user = mysqli_fetch_assoc($findR);
-}
 if(isset($_POST["edit-user"])){
     $update = "UPDATE employees SET ". 
     " name = '" . $_POST["name"] . 
@@ -21,7 +16,14 @@ if(isset($_POST["edit-user"])){
         header("Location: /admin/users.php");
     }
 }
+
 include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
+
+if(isset($_GET["id"])){
+	$find = "SELECT * FROM employees WHERE id=" . $_GET["id"];
+	$findR = mysqli_query($connect, $find);
+	$user = mysqli_fetch_assoc($findR);
+}
 ?>
 
 <nav aria-label="breadcrumb">
@@ -114,6 +116,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 </div>
 
 
+
 <?php
-    include "../../parts/footer.php";
+    include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/footer.php";
 ?>

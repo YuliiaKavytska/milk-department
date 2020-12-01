@@ -48,6 +48,7 @@ $page = "sale";
 
 <!--  My script    -->
 <script src="../assets/js/script.js"></script>
+
 <?php
-    include "parts/footer.php";
+    include  $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/footer.php";
 ?>

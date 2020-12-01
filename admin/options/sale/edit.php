@@ -2,7 +2,6 @@
 include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 $page = "sale";
 
-include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 
 
 if(isset($_POST["edit"])){
@@ -37,6 +36,8 @@ if(isset($_POST["edit"])){
     }
 }
 $sale = mysqli_fetch_assoc($connect->query("SELECT * FROM  sale WHERE id=" . $_GET["id"]));
+
+include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 ?>
 
 <nav aria-label="breadcrumb">
