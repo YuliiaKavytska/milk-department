@@ -1,8 +1,8 @@
 <?php
-$sql = "DROP DATABASE IF EXISTS milk-department";
-mysqli_query($sql);
+include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 
-if(isset($_COOKIE["admin"])){
+
+if(isset($_COOKIE["admin"]) && ($connect->query("DROP DATABASE `milk-department`"))){
 	setcookie("admin", "", 0, "/");
 	header("Location: /");
 }
