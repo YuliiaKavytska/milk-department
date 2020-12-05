@@ -21,7 +21,7 @@ $page = "stores";
         <div class="card strpied-tabled-with-hover">
             <div class="card-header ">
                 <h4 class="card-title ">
-                Products
+                Магазини
                 <a href="options/stores/add.php" class="btn btn-success">Додати</a></h4>
             </div>
             <div class="card-body table-full-width table-responsive">

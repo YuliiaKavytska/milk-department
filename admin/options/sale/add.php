@@ -77,7 +77,7 @@ if(isset($_POST["add-sale"])){
                             <div class="form-group">
                                 <label>Магазин</label>
                                 <select name="shop_id" class="form-control" id="exampleFormControlSelect1">
-                                    <option value="0">Dont select</option>
+                                    <option value="0">Не обрано</option>
                                     <?php
                                         $shopsSql = "SELECT * FROM  shops";
                                         $shopsResult = $connect->query($shopsSql);
