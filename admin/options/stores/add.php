@@ -1,6 +1,6 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
-$page = "products";
+$page = "stores";
 
 include $_SERVER['DOCUMENT_ROOT'] . "/admin/parts/head.php";
 

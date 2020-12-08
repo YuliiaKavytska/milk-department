@@ -6,7 +6,6 @@ function deleteProduct(element){
 
 	var table = document.querySelector("#table-body");
 		 table.innerHTML = addRequest.response;
-
 }
 
 var searchUser = document.querySelector("#user-search");
@@ -37,23 +36,6 @@ if(purcSearch != null){
 			 query.send("min=" + minimum.value + "&max=" + maximum.value);
 
 		var table = document.querySelector("#table-perc");
-		table.innerHTML = query.response;
-	}
-}
-
-var sale = document.querySelector("#sale");
-if(sale != null){
-	sale.onsubmit = function(e){
-		e.preventDefault();
-		var minimum = sale.querySelector("#minimum");
-		var maximum = sale.querySelector("#maximum");
-
-		var query = new XMLHttpRequest();
-			 query.open("POST", sale.action, false);
-			 query.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			 query.send("min=" + minimum.value + "&max=" + maximum.value);
-
-		var table = document.querySelector("#table-body-sale");
 		table.innerHTML = query.response;
 	}
 }
