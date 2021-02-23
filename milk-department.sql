@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 05 2020 г., 17:39
+-- Время создания: Фев 23 2021 г., 15:23
 -- Версия сервера: 10.4.14-MariaDB
 -- Версия PHP: 7.4.10
 
@@ -55,7 +55,8 @@ INSERT INTO `employees` (`id`, `name`, `mail`, `confirm_mail`, `verifided`, `pas
 (19, 'Єршов Олександр Олегович', 'er@er.er', 'fhg9uiai4xtBQk2VsqDz', 0, 'd2b8d9a2bafbc6413fc608ff7539a6ad', '0', 'Пакувальник', 'Виготовлення'),
 (20, 'Афанасьєв Андрій Валерійович', 'a@a.a', 'WUCEhW7NgGhslOOEwFMy', 0, '177ea4f7870464a0a7138ff4d2757497', '0', 'Грузчик', 'Відділ доставки'),
 (21, 'Ключник Сергій Вікторович', 'k@k.k', 'Dfgg0rrX3UsfImthq7nJ', 0, '105f307da010a93cfb31e27533fc9c23', '0', 'Водій', 'Відділ доставки'),
-(22, 'Погорелова Дарья Ігорівна', 'p@p.p', 'FuZaNUthZgivYd8nfKu1', 1, '1dfd6fdfe4a1a0bd05342f7c294ecd16', '0', 'Розливальник', 'Виготовлення');
+(22, 'Погорелова Дарья Ігорівна', 'p@p.p', 'FuZaNUthZgivYd8nfKu1', 1, '1dfd6fdfe4a1a0bd05342f7c294ecd16', '0', 'Розливальник', 'Виготовлення'),
+(23, 'Іванов Василь Миколайович', 'i@i.i', 'v4PnLiwfOMx5eiwUpVd1', 1, '8758569d383599746e177ab0346b6be7', '1', 'Адміністратор', 'Головний');
 
 -- --------------------------------------------------------
 
@@ -249,7 +250,7 @@ ALTER TABLE `working`
 -- AUTO_INCREMENT для таблицы `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `purchase`

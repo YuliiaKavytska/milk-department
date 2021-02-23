@@ -33,7 +33,7 @@
 			?>
 			<div class="container">
 				<div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
-					<strong>На жаль,</strong> Ваш аккаунт не підтверджено. Будь ласка, перевірте свою пошту або<a href="/get-verify.php" class="font-italic alert-success"><strong> отримати нове підтверджуюче посилання.</strong></a>
+					<strong>Нажаль,</strong> Ваш аккаунт не підтверджено. Будь ласка, перевірте свою пошту або<a href="/get-verify.php" class="font-italic alert-success"><strong> отримати нове підтверджуюче посилання.</strong></a>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -47,7 +47,7 @@
 				?>
 				<div class="container">
 				<div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
-					<strong>На жаль,</strong> Ви не володієте правами адміністратора.
+					<strong>Нажаль,</strong> Ви не володієте правами адміністратора.
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -89,7 +89,14 @@
 	<title>Вхід</title>
 </head>
 <body class="bg-info">
-
+<div class="container">
+	<div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+		Login: i@i.i Password: IIIiii111!!!
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+</div>
 <div class="container">
 	<div class="card mt-5">
 		<h5 class="card-header text-center">Вхід</h5>
